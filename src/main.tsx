@@ -1,8 +1,9 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
+import "@/index.css";
 
 import { BrowserRouter, Route, Routes } from "react-router";
+import RootLayout from "@/layouts/root-layout";
 import AppLayout from "@/layouts/app-layout";
 import LandingPage from "@/pages/landing-page";
 
@@ -18,11 +19,14 @@ createRoot(root).render(
       <Routes>
         <Route
           path="/"
-          element={<AppLayout />}>
+          element={<RootLayout />}>
           <Route
             index
             element={<LandingPage />}
           />
+          <Route
+            path="/app"
+            element={<AppLayout />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

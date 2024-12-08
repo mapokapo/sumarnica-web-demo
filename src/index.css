@@ -29,6 +29,17 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+
+    --sum-blue: 206 87% 25%;
+    --sum-blue-foreground: 0 0% 98%;
+    --sum-red: 358 85% 52%;
+    --sum-red-foreground: 0 0% 98%;
+    --eduid-blue: 211 100% 43%;
+    --eduid-blue-foreground: 0 0% 98%;
+    --eduid-dark: 206 7% 38%;
+    --eduid-dark-foreground: 0 0% 98%;
+    --eduid-light: 210 16% 90%;
+    --eduid-light-foreground: 240 10% 3.9%;
   }
   .dark {
     --background: 240 10% 3.9%;

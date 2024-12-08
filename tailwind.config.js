@@ -10,6 +10,26 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
+        "sum-blue": {
+          DEFAULT: "hsl(var(--sum-blue))",
+          foreground: "hsl(var(--sum-blue-foreground))",
+        },
+        "sum-red": {
+          DEFAULT: "hsl(var(--sum-red))",
+          foreground: "hsl(var(--sum-red-foreground))",
+        },
+        "eduid-blue": {
+          DEFAULT: "hsl(var(--eduid-blue))",
+          foreground: "hsl(var(--eduid-blue-foreground))",
+        },
+        "eduid-dark": {
+          DEFAULT: "hsl(var(--eduid-dark))",
+          foreground: "hsl(var(--eduid-dark-foreground))",
+        },
+        "eduid-light": {
+          DEFAULT: "hsl(var(--eduid-light))",
+          foreground: "hsl(var(--eduid-light-foreground))",
+        },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
