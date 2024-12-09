@@ -6,6 +6,9 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import RootLayout from "@/layouts/root-layout";
 import AppLayout from "@/layouts/app-layout";
 import LandingPage from "@/pages/landing-page";
+import SmartClassroomsPage from "@/pages/app/smart-classrooms-page";
+import VirtualLibraryPage from "@/pages/app/virtual-library-page";
+import UserProvider from "@/components/providers/user-provider";
 
 const root = document.getElementById("root");
 
@@ -15,20 +18,31 @@ if (!root) {
 
 createRoot(root).render(
   <StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route
-          path="/"
-          element={<RootLayout />}>
+    <UserProvider>
+      <BrowserRouter>
+        <Routes>
           <Route
-            index
-            element={<LandingPage />}
-          />
-          <Route
-            path="/app"
-            element={<AppLayout />}></Route>
-        </Route>
-      </Routes>
-    </BrowserRouter>
+            path="/"
+            element={<RootLayout />}>
+            <Route
+              index
+              element={<LandingPage />}
+            />
+            <Route
+              path="/app"
+              element={<AppLayout />}>
+              <Route
+                path="/app/pametne-ucionice"
+                element={<SmartClassroomsPage />}
+              />
+              <Route
+                path="/app/virtualna-knjiznica"
+                element={<VirtualLibraryPage />}
+              />
+            </Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </UserProvider>
   </StrictMode>
 );
