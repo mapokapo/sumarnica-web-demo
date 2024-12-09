@@ -24,6 +24,10 @@ const RootLayout: React.FC = () => {
   }, []);
 
   useEffect(() => {
+    if (!import.meta.env.DEV) {
+      return;
+    }
+
     if (isDevMode) {
       if (user === null) {
         setUser({
