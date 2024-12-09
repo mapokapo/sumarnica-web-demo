@@ -9,16 +9,18 @@ import React from "react";
 
 const LandingPage: React.FC = () => {
   return (
-    <div className="flex h-full flex-col items-center justify-center gap-16 bg-sum-blue">
+    <div className="flex flex-col items-center justify-center gap-16 bg-sum-blue">
       <section className="flex w-full flex-1 flex-col bg-gradient-to-b from-white to-sum-blue p-4 pt-16">
-        <span className="text-center text-2xl font-semibold text-sum-blue">
-          Dobrodošli
-        </span>
-        <h1 className="my-16 text-center text-5xl font-bold text-sum-blue lg:text-7xl">
-          SUMarnica
-        </h1>
-        <div className="mx-auto flex h-full w-full flex-col-reverse justify-center gap-8 lg:w-5/6 lg:flex-row lg:gap-4">
-          <div className="flex-[2]">
+        <div className="mx-auto flex h-full w-full flex-col-reverse justify-center gap-8 lg:w-4/6 lg:flex-row lg:gap-4">
+          <div className="flex-[5]">
+            <div className="flex flex-col">
+              <span className="text-center text-2xl font-semibold text-sum-blue">
+                Dobrodošli
+              </span>
+              <h1 className="z-10 my-16 text-center text-5xl font-bold text-sum-blue lg:text-7xl">
+                SUMarnica
+              </h1>
+            </div>
             <div className="mx-8 flex flex-col gap-8 bg-gradient-to-b from-sum-red via-sum-red to-transparent p-8 pb-32 text-sum-red-foreground">
               <p className="text-lg font-semibold">
                 SUMarnica je najlakši način za upravljanje pametnih radionica i
@@ -64,7 +66,7 @@ const LandingPage: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="hidden max-h-full flex-[1] flex-col gap-8 lg:flex lg:self-baseline">
+          <div className="hidden max-h-full flex-[2] flex-col gap-8 self-center lg:flex">
             <img
               src="/stock/students-meeting-classroom.jpg"
               alt="Students having a work session around a table with laptops and notebooks"
