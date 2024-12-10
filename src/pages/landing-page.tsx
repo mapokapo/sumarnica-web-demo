@@ -9,7 +9,7 @@ import React from "react";
 
 const LandingPage: React.FC = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-16 bg-sum-blue">
+    <div className="flex min-h-screen flex-col items-center justify-center gap-16 bg-sum-blue">
       <section className="flex w-full flex-1 flex-col bg-gradient-to-b from-white to-sum-blue p-4 pt-16">
         <div className="mx-auto flex h-full w-full flex-col-reverse justify-center gap-8 lg:w-5/6 lg:flex-row lg:gap-4 xl:w-4/6">
           <div className="flex-[5]">
