@@ -18,7 +18,10 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        sum: "bg-eduid-blue text-eduid-blue-foreground hover:bg-eduid-blue/90 rounded-none",
+        eduid:
+          "bg-eduid-blue text-eduid-blue-foreground hover:bg-eduid-blue/90 rounded-none",
+        sum: "bg-sum-red text-sum-red-foreground hover:bg-sum-red/90",
+        "sum-secondary": "bg-background text-foreground hover:bg-accent",
       },
       size: {
         default: "h-10 px-4 py-2",
