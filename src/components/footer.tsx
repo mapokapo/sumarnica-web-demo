@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
         </div>
         <div className="flex flex-1 flex-col gap-8 p-4">
           <strong className="text-center">O NAMA</strong>
-          <ul className="flex flex-col items-center px-4 md:items-start">
+          <ul className="text-sum-blue-muted-foreground flex flex-col items-center px-4 md:items-start">
             <li>
               <NavLink to="/o-nama/sumarnica">SUMarnica</NavLink>
             </li>
@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
         </div>
         <div className="flex flex-1 flex-col gap-8 p-4">
           <strong className="text-center">SURADNJA</strong>
-          <ul className="flex flex-col items-center px-4 md:items-start">
+          <ul className="text-sum-blue-muted-foreground flex flex-col items-center px-4 md:items-start">
             <li>
               <NavLink to="/suradnja/udruge">Udruge</NavLink>
             </li>
@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
           </ul>
         </div>
       </div>
-      <p className="text-lg text-sum-blue-foreground/50">
+      <p className="text-sum-blue-muted-foreground text-lg">
         Copyright &copy; <strong>SUMarnica</strong> 2024
       </p>
     </footer>

@@ -32,8 +32,12 @@
 
     --sum-blue: 206 87% 25%;
     --sum-blue-foreground: 0 0% 98%;
+    --sum-blue-muted: 206 82% 38%;
+    --sum-blue-muted-foreground: 0 0% 70%;
     --sum-red: 358 85% 52%;
     --sum-red-foreground: 0 0% 98%;
+    --sum-red-muted: 358 58% 59%;
+    --sum-red-muted-foreground: 0 0% 70%;
     --eduid-blue: 211 100% 43%;
     --eduid-blue-foreground: 0 0% 98%;
     --eduid-dark: 206 7% 38%;

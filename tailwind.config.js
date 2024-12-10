@@ -14,9 +14,17 @@ export default {
           DEFAULT: "hsl(var(--sum-blue))",
           foreground: "hsl(var(--sum-blue-foreground))",
         },
+        "sum-blue-muted": {
+          DEFAULT: "hsl(var(--sum-blue-muted))",
+          foreground: "hsl(var(--sum-blue-muted-foreground))",
+        },
         "sum-red": {
           DEFAULT: "hsl(var(--sum-red))",
           foreground: "hsl(var(--sum-red-foreground))",
+        },
+        "sum-red-muted": {
+          DEFAULT: "hsl(var(--sum-red-muted))",
+          foreground: "hsl(var(--sum-red-muted-foreground))",
         },
         "eduid-blue": {
           DEFAULT: "hsl(var(--eduid-blue))",
