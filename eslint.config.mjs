@@ -34,6 +34,7 @@ export default tseslint.config(
         "warn",
         { allowConstantExport: true },
       ],
+      "@typescript-eslint/no-confusing-void-expression": "off",
     },
   }
 );

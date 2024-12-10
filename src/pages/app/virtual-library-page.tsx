@@ -1,6 +1,8 @@
+import { Input } from "@/components/ui/input";
 import VirtualBookCard from "@/components/virtual-book-card";
 import { VirtualBook } from "@/lib/types/VirtualBook";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import fuzzySort from "fuzzysort";
 
 const virtualBooks: VirtualBook[] = [
   {
@@ -123,6 +125,23 @@ const virtualBooks: VirtualBook[] = [
 ];
 
 const VirtualLibraryPage: React.FC = () => {
+  const [searchText, setSearchText] = useState("");
+  const [filteredBooks, setFilteredBooks] = useState(virtualBooks);
+
+  useEffect(() => {
+    if (searchText.trim() === "") {
+      setFilteredBooks(virtualBooks);
+      return;
+    }
+
+    const results = fuzzySort.go(searchText, virtualBooks, {
+      keys: ["title", "authorName", "summary"],
+      threshold: 0.25,
+    });
+
+    setFilteredBooks(results.map(result => result.obj));
+  }, [searchText]);
+
   return (
     <div className="flex min-h-screen flex-col items-center justify-center gap-16 bg-white bg-gradient-to-br from-white to-sum-blue/25">
       <section className="flex w-full flex-1 flex-col gap-4 p-4 py-16 pt-16 lg:w-5/6 2xl:w-4/6">
@@ -133,14 +152,27 @@ const VirtualLibraryPage: React.FC = () => {
           Istražite sveučilišnu literaturu ili dajte doprinos virtualnoj
           knjižnici tako što registrirate knjige ili digitalizirate sadržaj.
         </p>
+        <Input
+          value={searchText}
+          onChange={e => setSearchText(e.target.value)}
+          placeholder="Pretraži knjžnicu..."
+        />
         <ul className="grid w-full grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-3">
-          {virtualBooks.map(virtualBook => (
-            <li
-              key={virtualBook.isbn}
-              className="flex w-full">
-              <VirtualBookCard virtualBook={virtualBook} />
+          {filteredBooks.length === 0 ? (
+            <li className="flex w-full items-center justify-center">
+              <p className="text-lg font-semibold text-gray-500">
+                Nema rezultata pretrage
+              </p>
             </li>
-          ))}
+          ) : (
+            filteredBooks.map(virtualBook => (
+              <li
+                key={virtualBook.isbn}
+                className="flex w-full">
+                <VirtualBookCard virtualBook={virtualBook} />
+              </li>
+            ))
+          )}
         </ul>
       </section>
     </div>
