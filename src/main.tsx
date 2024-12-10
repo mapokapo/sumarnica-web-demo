@@ -9,6 +9,7 @@ import LandingPage from "@/pages/landing-page";
 import SmartClassroomsPage from "@/pages/app/smart-classrooms-page";
 import VirtualLibraryPage from "@/pages/app/virtual-library-page";
 import UserProvider from "@/components/providers/user-provider";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const root = document.getElementById("root");
 
@@ -16,33 +17,37 @@ if (!root) {
   throw new Error("Root element not found");
 }
 
+const queryClient = new QueryClient();
+
 createRoot(root).render(
   <StrictMode>
-    <UserProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path="/"
-            element={<RootLayout />}>
+    <QueryClientProvider client={queryClient}>
+      <UserProvider>
+        <BrowserRouter>
+          <Routes>
             <Route
-              index
-              element={<LandingPage />}
-            />
-            <Route
-              path="/app"
-              element={<AppLayout />}>
+              path="/"
+              element={<RootLayout />}>
               <Route
-                path="/app/pametne-ucionice"
-                element={<SmartClassroomsPage />}
+                index
+                element={<LandingPage />}
               />
               <Route
-                path="/app/virtualna-knjiznica"
-                element={<VirtualLibraryPage />}
-              />
+                path="/app"
+                element={<AppLayout />}>
+                <Route
+                  path="/app/pametne-ucionice"
+                  element={<SmartClassroomsPage />}
+                />
+                <Route
+                  path="/app/virtualna-knjiznica"
+                  element={<VirtualLibraryPage />}
+                />
+              </Route>
             </Route>
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </UserProvider>
+          </Routes>
+        </BrowserRouter>
+      </UserProvider>
+    </QueryClientProvider>
   </StrictMode>
 );

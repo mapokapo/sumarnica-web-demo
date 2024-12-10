@@ -12,7 +12,7 @@ export default tseslint.config(
       js.configs.recommended,
       ...tseslint.configs.strictTypeChecked,
       ...tseslint.configs.stylisticTypeChecked,
-      ...pluginQuery.configs.recommended,
+      ...pluginQuery.configs["flat/recommended"],
     ],
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
