@@ -76,16 +76,24 @@ const VirtualBookCard: React.FC<Props> = ({ virtualBook }) => {
             </div>
           </div>
           <CollapsibleContent>
-            <ul className="flex flex-col items-center gap-2">
-              <li className="flex items-center gap-1">
+            <ul className="flex w-full flex-col items-stretch divide-y">
+              <li className="flex items-center justify-between gap-1">
                 <span className="font-bold text-sum-red-foreground">ISBN:</span>
                 <span className="text-sum-red-foreground">
                   {virtualBook.isbn}
                 </span>
               </li>
+              <li className="flex items-center justify-between gap-1">
+                <span className="font-bold text-sum-red-foreground">
+                  Lokacija:
+                </span>
+                <span className="text-sum-red-foreground">
+                  {virtualBook.locationInfo.locationName}
+                </span>
+              </li>
               {virtualBook.digitalizedContent !== null && (
                 <>
-                  <li className="flex items-center gap-1">
+                  <li className="flex items-center justify-between gap-1">
                     <span className="font-bold text-sum-red-foreground">
                       Digitalizirao/la:
                     </span>
@@ -93,7 +101,7 @@ const VirtualBookCard: React.FC<Props> = ({ virtualBook }) => {
                       {virtualBook.digitalizedContent.digitalizedByUserName}
                     </span>
                   </li>
-                  <li className="flex items-center gap-1">
+                  <li className="flex items-center justify-between gap-1">
                     <span className="font-bold text-sum-red-foreground">
                       Datum digitaliziranja:
                     </span>

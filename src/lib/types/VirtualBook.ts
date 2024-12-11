@@ -4,6 +4,10 @@ export interface VirtualBook {
   summary: string;
   authorName: string;
   authorId: string;
+  locationInfo: {
+    locationName: string;
+    locationId: string;
+  };
   digitalizedContent: {
     pdfUrl: string;
     pageCount: number;

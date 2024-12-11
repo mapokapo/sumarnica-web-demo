@@ -1,5 +1,6 @@
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
+import { Toaster } from "@/components/ui/sonner";
 import { useUser } from "@/lib/context/user-context";
 import { Code } from "lucide-react";
 import React, { useEffect, useState } from "react";
@@ -56,6 +57,7 @@ const RootLayout: React.FC = () => {
         <Outlet />
       </main>
       <Footer />
+      <Toaster />
     </div>
   );
 };
