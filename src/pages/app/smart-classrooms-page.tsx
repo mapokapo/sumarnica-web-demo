@@ -226,14 +226,12 @@ const SmartClassroomsPage: React.FC = () => {
       return ["Reservation start time must be before end time"];
     }
 
-    for (const scr of smartClassRooms) {
-      for (const r of scr.reservations) {
-        if (
-          r.reservationFrom.getTime() < reservation.reservationTo.getTime() &&
-          r.reservationTo.getTime() > reservation.reservationFrom.getTime()
-        ) {
-          return ["Reservation overlaps with another reservation"];
-        }
+    for (const r of smartClassRoom.reservations) {
+      if (
+        r.reservationFrom.getTime() < reservation.reservationTo.getTime() &&
+        r.reservationTo.getTime() > reservation.reservationFrom.getTime()
+      ) {
+        return ["Reservation overlaps with another reservation"];
       }
     }
 
