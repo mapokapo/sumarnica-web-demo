@@ -12,6 +12,10 @@ const virtualBooks: VirtualBook[] = [
       "Detaljan uvod u temeljne koncepte računalnih znanosti i programiranja.",
     authorName: "Ivan Horvat",
     authorId: "author1",
+    locationInfo: {
+      locationId: "location1",
+      locationName: "Sveučilišna knjižnica",
+    },
     digitalizedContent: null,
   },
   {
@@ -21,6 +25,10 @@ const virtualBooks: VirtualBook[] = [
       "Vodič kroz osnove elektronike s praktičnim primjerima i projektima.",
     authorName: "Marko Perić",
     authorId: "author2",
+    locationInfo: {
+      locationId: "location2",
+      locationName: "FSRE knjižnica",
+    },
     digitalizedContent: {
       pdfUrl: "https://example.com/book2.pdf",
       pageCount: 300,
@@ -36,6 +44,10 @@ const virtualBooks: VirtualBook[] = [
       "Comprehensive guide to algorithms, covering both theory and practice.",
     authorName: "Thomas H. Cormen",
     authorId: "author3",
+    locationInfo: {
+      locationId: "location3",
+      locationName: "FPMOZ knjižnica",
+    },
     digitalizedContent: {
       pdfUrl: "https://example.com/book3.pdf",
       pageCount: 1292,
@@ -51,6 +63,10 @@ const virtualBooks: VirtualBook[] = [
       "Udžbenik koji pokriva osnove strojarstva s naglaskom na praktične primjene.",
     authorName: "Ana Kovač",
     authorId: "author4",
+    locationInfo: {
+      locationId: "location4",
+      locationName: "Knjižnica 1",
+    },
     digitalizedContent: null,
   },
   {
@@ -60,6 +76,10 @@ const virtualBooks: VirtualBook[] = [
       "Povezivanje teorije i prakse u projektiranju elektromehaničkih sustava.",
     authorName: "Petar Novak",
     authorId: "author5",
+    locationInfo: {
+      locationId: "location5",
+      locationName: "Knjižnica 2",
+    },
     digitalizedContent: {
       pdfUrl: "https://example.com/book5.pdf",
       pageCount: 450,
@@ -74,6 +94,10 @@ const virtualBooks: VirtualBook[] = [
     summary: "A deep dive into the inner workings of modern computer systems.",
     authorName: "David A. Patterson",
     authorId: "author6",
+    locationInfo: {
+      locationId: "location6",
+      locationName: "Knjižnica 3",
+    },
     digitalizedContent: null,
   },
   {
@@ -82,6 +106,10 @@ const virtualBooks: VirtualBook[] = [
     summary: "Analiza ekonomskih aspekata i principa inženjerskih projekata.",
     authorName: "Marta Jurić",
     authorId: "author7",
+    locationInfo: {
+      locationId: "location7",
+      locationName: "Knjižnica 4",
+    },
     digitalizedContent: null,
   },
   {
@@ -90,6 +118,10 @@ const virtualBooks: VirtualBook[] = [
     summary: "Razrada naprednih koncepata i tehnologija računalnih mreža.",
     authorName: "Luka Radić",
     authorId: "author8",
+    locationInfo: {
+      locationId: "location8",
+      locationName: "Knjižnica 5",
+    },
     digitalizedContent: {
       pdfUrl: "https://example.com/book8.pdf",
       pageCount: 380,
@@ -105,6 +137,10 @@ const virtualBooks: VirtualBook[] = [
       "A definitive guide to modern electronics, combining theory and practice.",
     authorName: "Paul Horowitz",
     authorId: "author9",
+    locationInfo: {
+      locationId: "location9",
+      locationName: "Knjižnica 6",
+    },
     digitalizedContent: null,
   },
   {
@@ -114,6 +150,10 @@ const virtualBooks: VirtualBook[] = [
       "Pregled ključnih pojmova i primjena termodinamike u inženjeringu.",
     authorName: "Vanja Šarić",
     authorId: "author10",
+    locationInfo: {
+      locationId: "location10",
+      locationName: "Knjižnica 7",
+    },
     digitalizedContent: {
       pdfUrl: "https://example.com/book10.pdf",
       pageCount: 500,

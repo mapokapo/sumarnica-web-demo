@@ -83,6 +83,14 @@ const VirtualBookCard: React.FC<Props> = ({ virtualBook }) => {
                   {virtualBook.isbn}
                 </span>
               </li>
+              <li className="flex items-center gap-1">
+                <span className="font-bold text-sum-red-foreground">
+                  Lokacija:
+                </span>
+                <span className="text-sum-red-foreground">
+                  {virtualBook.locationInfo.locationName}
+                </span>
+              </li>
               {virtualBook.digitalizedContent !== null && (
                 <>
                   <li className="flex items-center gap-1">
