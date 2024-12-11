@@ -32,3 +32,15 @@ export const useUser = (): UserProviderState => {
 
   return context;
 };
+
+export const useAppUser = (): UserProviderState & {
+  user: User;
+} => {
+  const { user, setUser } = useUser();
+
+  if (user === null) {
+    throw new Error("useAppUser used in a non-authenticated route");
+  }
+
+  return { user, setUser };
+};
